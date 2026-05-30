@@ -1,0 +1,14 @@
+{
+  "name": "future_fs_02_crm",
+  "version": "1.0.0",
+  "description": "Root concurrent configuration for FUTURE_FS_02 Mini CRM",
+  "scripts": {
+    "install-all": "npm install --prefix client && npm install --prefix server",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "npx concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
